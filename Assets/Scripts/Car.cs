@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Car : MonoBehaviour
 {
@@ -15,7 +16,10 @@ public class Car : MonoBehaviour
 	[SerializeField] private bool _directionSet;							// Used to check if the player has pressed a key
 
 	private enum Direction { left, right };				// A enum used to store the directions the player is able to move in
-	private Direction _currentDirection;				// A new direction for what the player wants to go in
+	private Direction _currentDirection;                // A new direction for what the player wants to go in
+
+	private Ease _movementEase = Ease.InOutSine;
+
 
 	private void Awake()
 	{
@@ -68,7 +72,7 @@ public class Car : MonoBehaviour
 			if (transform.position != _lanes[_currentLane - 1].position)
 			{
 				// Lerping from the current lane to the lane towards the left
-				transform.position = Vector3.Lerp(transform.position, _lanes[_currentLane - 1].position, _lerpSpeed * Time.deltaTime);
+				transform.DOMove(_lanes[_currentLane - 1].position, _lerpSpeed, false);
 			}
 			else
 			{
@@ -86,7 +90,7 @@ public class Car : MonoBehaviour
 			if (transform.position != _lanes[_currentLane + 1].position)
 			{
 				// Lerping from the current lane to the lane towards the right
-				transform.position = Vector3.Lerp(transform.position, _lanes[_currentLane + 1].position, _lerpSpeed * Time.deltaTime);
+				transform.DOMove(_lanes[_currentLane + 1].position, _lerpSpeed, true);
 			}
 			else
 			{

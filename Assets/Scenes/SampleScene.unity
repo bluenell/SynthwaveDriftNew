@@ -1588,7 +1588,7 @@ MonoBehaviour:
   - {fileID: 210177398}
   - {fileID: 1353765648}
   _carInput: {fileID: 1664658455}
-  _lerpSpeed: 25
+  _lerpSpeed: 0.5
   _currentLane: 0
   _directionSet: 0
 --- !u!114 &1664658455
