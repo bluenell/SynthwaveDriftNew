@@ -57,10 +57,11 @@ public class RoadGenerator : MonoBehaviour
 		// Setting the parent to the road parent object in the scene, moving the new road to end of the line, and adding it to the list of active roads
 		currentRoad.transform.SetParent(_roadParent.transform);
 		currentRoad.transform.localPosition = new Vector3(0, 0, _spawnZ);
-		_activeRoads.Add(currentRoad);				
+		_activeRoads.Add(currentRoad);
 
 		// Incrementing the next spawn Z by the length of the current road
-		_spawnZ += currentRoad.GetComponent<Road>().GetRoadSize();
+		float currentRoadSize = currentRoad.GetComponent<Road>().GetRoadSize();
+		_spawnZ += currentRoadSize;
 
 	}
 
@@ -76,7 +77,8 @@ public class RoadGenerator : MonoBehaviour
 			_activeRoads[i].transform.localPosition = new Vector3(0, 0, _spawnZ);
 
 			// Incrementing spawnZ by the current road's length
-			_spawnZ += _activeRoads[i].GetComponent<Road>().GetRoadSize();
+			float activeRoadSize = _activeRoads[i].GetComponent<Road>().GetRoadSize();
+			_spawnZ += activeRoadSize;
 		}
 	}
 
