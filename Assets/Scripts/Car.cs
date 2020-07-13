@@ -44,15 +44,16 @@ public class Car : MonoBehaviour
 	{
 		if (!_directionSet)
 		{
-			if (_carInput.HorizontalAxis <0)
+			if (_carInput.HasSwipedRight)
 			{
-				_currentDirection = Direction.left;
+				_currentDirection = Direction.right;
 				_directionSet = true;
 			}
 
-			if (_carInput.HorizontalAxis >0)
+			if (_carInput.HasSwipedLeft)
 			{
-				_currentDirection = Direction.right;
+				Debug.Log("Left");
+				_currentDirection = Direction.left;
 				_directionSet = true;
 			}
 		}
@@ -74,6 +75,7 @@ public class Car : MonoBehaviour
 				// Decrementing the current lane by 1 and resetting directionSet
 				_currentLane--;
 				_directionSet = false;
+
 			}
 
 		}
@@ -93,6 +95,11 @@ public class Car : MonoBehaviour
 				_directionSet = false;
 			}
 
+		}
+		else
+		{
+			_directionSet = false;
+			Debug.Log($"Player cannot move to the {direction} anymore");
 		}
 
 	}

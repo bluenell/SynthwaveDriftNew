@@ -1158,11 +1158,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxRoadsOnScreen: 10
-  _newSpawnDistance: 5
-  _maxDistance: 10
+  _newSpawnDistance: 150
+  _maxDistance: 150
   _spawnZ: 0
   _roads:
-  - {fileID: 2052798148250733002, guid: 15e3850eb33f8c74a9c10f1eaed731f4, type: 3}
+  - {fileID: 4378151579758327509, guid: 96a20ae8847abb842bf0a818abcb3c0e, type: 3}
   _roadParent: {fileID: 1811107255}
 --- !u!4 &1067936978
 Transform:
@@ -1603,6 +1603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe52baef16bfed94b84cfadc60dbaa96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _minimumSwipeDistance: 0.5
 --- !u!1 &1687258581
 GameObject:
   m_ObjectHideFlags: 0
