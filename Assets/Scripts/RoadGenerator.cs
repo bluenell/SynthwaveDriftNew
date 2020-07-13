@@ -14,13 +14,13 @@ public class RoadGenerator : MonoBehaviour
 	[SerializeField] private GameObject[] _roads;
 	[SerializeField] private GameObject _roadParent;			
 
-	private List<GameObject> _activeRoads;		
+	private List<GameObject> _activeRoads;
+
 	
 	private void Awake()
 	{
 		// Creating a new list of currently active roads (the roads that are in the scene at the moment)
 		_activeRoads = new List<GameObject>();
-
 		// Initilizing the game, creating the first set of roads. Can be changed with maxRoadsOnScreen)
 		for (int i = 0; i < _maxRoadsOnScreen; i++)
 		{

@@ -334,7 +334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6568679030729763520}
   m_Layer: 0
-  m_Name: BMW M1 Render
+  m_Name: BMW M1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -421,11 +421,11 @@ MeshRenderer:
   - {fileID: 2100000, guid: 16f6a722e14348d4484502d7f6332abb, type: 2}
   - {fileID: 2100000, guid: 7eb57d2631bae894384a9a14403dc382, type: 2}
   - {fileID: 1233166730646596069, guid: f5af36b2422a2cb4c869b07cedc8ce40, type: 3}
-  - {fileID: 5762597097827738875, guid: f5af36b2422a2cb4c869b07cedc8ce40, type: 3}
+  - {fileID: 2100000, guid: 3c3d0daf995c78c4686aa0ee55c81387, type: 2}
   - {fileID: 371889068432013525, guid: f5af36b2422a2cb4c869b07cedc8ce40, type: 3}
-  - {fileID: -4849961350415792677, guid: f5af36b2422a2cb4c869b07cedc8ce40, type: 3}
-  - {fileID: -8274133419916619345, guid: f5af36b2422a2cb4c869b07cedc8ce40, type: 3}
-  - {fileID: 3282552440469798448, guid: f5af36b2422a2cb4c869b07cedc8ce40, type: 3}
+  - {fileID: 2100000, guid: c21c0fa3b3e001f469b7732efd6a8310, type: 2}
+  - {fileID: 2100000, guid: 87b30da99ce5afb4ca0d3b0fbcd4f43c, type: 2}
+  - {fileID: 2100000, guid: 3c3d0daf995c78c4686aa0ee55c81387, type: 2}
   - {fileID: 9185737683893222716, guid: f5af36b2422a2cb4c869b07cedc8ce40, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -505,7 +505,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d02d121d4d69df641b7f5e2ee3ddc84c, type: 2}
+  - {fileID: 2100000, guid: 434884659a04ecb4e9d379942f067658, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
