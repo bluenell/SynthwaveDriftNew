@@ -43,7 +43,7 @@ public class RoadGenerator : MonoBehaviour
 		// Checking if the road parent has reached the maximum distance it can go
 		if (_roadParent.transform.position.z < (_maxDistance * -1))
 		{
-			ResetRoad();
+			// ResetRoad();
 		}
 	}
 
