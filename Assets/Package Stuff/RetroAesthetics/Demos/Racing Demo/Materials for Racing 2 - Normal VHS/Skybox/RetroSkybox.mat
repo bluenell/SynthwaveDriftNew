@@ -66,15 +66,15 @@ Material:
     - _CubemapEnabled: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DirectionPitch: 56.9
+    - _DirectionPitch: 47.2
     - _DirectionYaw: 0
     - _DstBlend: 0
-    - _Exponent: 1.45
-    - _Gain: 2
+    - _Exponent: 3
+    - _Gain: 0.89
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Intensity: 1
+    - _Intensity: 2
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -83,30 +83,30 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _StripesDistance: 0.0081
-    - _StripesExponent1: 2.27
+    - _StripesExponent1: 1.09
     - _StripesExponent2: 3.5
-    - _StripesHeight: 0.525
+    - _StripesHeight: 0.512
     - _StripesSpeed: 0.25
-    - _StripesWidth: 0.0042
+    - _StripesWidth: 0.0046
     - _SunEnabled: 1
-    - _SunExponent: 5.41
-    - _SunPitch: 77.3
-    - _SunSize: 0.0066
+    - _SunExponent: 3.36
+    - _SunPitch: 97.9
+    - _SunSize: 0.0043
     - _SunYaw: 180
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 1, g: 1, b: 1, a: 0}
-    - _Color2: {r: 0.20659423, g: 0.13140441, b: 0.50735295, a: 0}
+    - _Color1: {r: 0.2688679, g: 0.65747166, b: 1, a: 0}
+    - _Color2: {r: 0.7264151, g: 0.030838363, b: 0.48751426, a: 0}
     - _ColorBg: {r: 0.97, g: 0.67, b: 0.51, a: 0}
     - _ColorGround1: {r: 0, g: 0.7, b: 0.74, a: 0}
     - _ColorGround2: {r: 0, g: 0.6, b: 0.74, a: 0}
     - _ColorStripe: {r: 0, g: 0.7, b: 0.74, a: 0}
     - _ColorSun: {r: 0.97, g: 0.67, b: 0.51, a: 0}
-    - _ColorSun1: {r: 0.14300193, g: 0, b: 0.44117647, a: 0}
+    - _ColorSun1: {r: 1, g: 0.9834502, b: 0, a: 0}
     - _ColorSun2: {r: 1, g: 0.375, b: 0.375, a: 0}
-    - _Direction: {r: 0, g: 0.5461019, b: 0.8377187, a: 0}
+    - _Direction: {r: 0, g: 0.6794413, b: 0.7337299, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SunDirection: {r: -0.000000085283936, g: 0.21984614, b: -0.97553456, a: 0}
-    - _SunDirectionP: {r: -0.000000019219556, g: -0.97553456, b: -0.2198461, a: 0}
+    - _SunDirection: {r: -0.00000008659308, g: -0.1374445, b: -0.99050945, a: 0}
+    - _SunDirectionP: {r: 0.000000012015794, g: -0.99050945, b: 0.13744466, a: 0}
