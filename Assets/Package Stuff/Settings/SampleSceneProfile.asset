@@ -99,7 +99,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.113
+    m_Value: 0.463
     min: 0
     max: 1
 --- !u!114 &-3702260335977978926
@@ -121,12 +121,12 @@ MonoBehaviour:
     m_Value: 10
   intensity:
     m_OverrideState: 1
-    m_Value: 0.381
+    m_Value: 0.479
     min: 0
     max: 1
   response:
     m_OverrideState: 1
-    m_Value: 0.414
+    m_Value: 0.441
     min: 0
     max: 1
   texture:
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
 --- !u!114 &6562442706360413039
 MonoBehaviour:
   m_ObjectHideFlags: 3

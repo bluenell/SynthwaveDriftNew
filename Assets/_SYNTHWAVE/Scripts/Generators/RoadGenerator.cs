@@ -15,7 +15,9 @@ public class RoadGenerator : MonoBehaviour
 	[SerializeField] private GameObject _roadParent;			
 
 	private List<GameObject> _activeRoads;
-	private float _spawnZ;											// The Z position for where the next road will spawn
+	private float _spawnZ;                                          // The Z position for where the next road will spawn
+
+	public float RoadSize; 
 
 	private void Awake()
 	{
@@ -62,6 +64,7 @@ public class RoadGenerator : MonoBehaviour
 
 		// Incrementing the next spawn Z by the length of the current road
 		float currentRoadSize = currentRoad.GetComponent<Road>().GetRoadSize();
+		RoadSize = currentRoadSize;
 		_spawnZ += currentRoadSize;
 
 	}
