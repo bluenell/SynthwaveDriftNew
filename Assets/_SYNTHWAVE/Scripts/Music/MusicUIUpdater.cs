@@ -9,6 +9,6 @@ public class MusicUIUpdater : MonoBehaviour
 
 	private void Start()
 	{
-		_songName.text = ($"{MusicSelector.instance.CurrentTrack._trackName.ToUpper()} - {MusicSelector.instance.CurrentTrack._trackArtist.ToUpper()}");		
+		_songName.text = ($"{MusicPlayer.instance.CurrentTrack._trackName.ToUpper()} - {MusicPlayer.instance.CurrentTrack._trackArtist.ToUpper()}");		
 	}
 }
