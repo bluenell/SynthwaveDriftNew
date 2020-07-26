@@ -12,7 +12,7 @@ public class CarCollider : MonoBehaviour
 	public event CollisionDetector Collided;
 
 
-	private void FixedUpdate()
+	private void Update()
 	{
 		Ray ray = new Ray(transform.position, new Vector3(transform.position.x, transform.position.y, transform.position.z + _raycastOffset));
 		RaycastHit hit;

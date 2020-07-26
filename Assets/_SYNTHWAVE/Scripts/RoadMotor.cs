@@ -18,7 +18,7 @@ public class RoadMotor : MonoBehaviour
 
 	private void FixedUpdate()	
 	{
-		float speed = CalculateRoadSpeed(MusicSelector.instance.CurrentTrack.BeatsPerMinute);
+		float speed = CalculateRoadSpeed(MusicPlayer.instance.CurrentTrack);
 		Debug.Log($"Road speed: {speed}");
 
 		transform.Translate(new Vector3(0, 0, -speed * Time.deltaTime));	
@@ -28,16 +28,13 @@ public class RoadMotor : MonoBehaviour
 
 	private void OnDisable()	{	_carCollider.Collided -= StopMovement;	}
 
-	float CalculateRoadSpeed(float bpm)
+	float CalculateRoadSpeed(MusicTrack track)
 	{
 		RoadGenerator roadGen = FindObjectOfType<RoadGenerator>();
 
-		Debug.Log($"Beats per Minute: {bpm}");
-
-		float beatsPerSecond = bpm / 60; Debug.Log($"Beats per Second: {beatsPerSecond}");
-		float secondsPerBeat = (1 / bpm) * 60; Debug.Log($"Seconds per Beat: {secondsPerBeat}");
-		float secondsPerBar = secondsPerBeat * 4; Debug.Log($"Seconds per Bar:  { secondsPerBar}");
-
+		float beatsPerMinute = track.BeatsPerMinute;
+		float secondsPerBeat = 1 / beatsPerMinute * 60;
+		float secondsPerBar = secondsPerBeat * 4;
 		float speed = roadGen.RoadSize / secondsPerBar;
 
 		return speed * _speedMultiplier;

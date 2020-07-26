@@ -6,11 +6,11 @@ using UnityEngine;
 public class MusicTrack : ScriptableObject
 {
 	public AudioClip Track;
-	[HideInInspector] public int BeatsPerMinute => _bpm;
+	[HideInInspector] public float BeatsPerMinute => _bpm;
 	
 	public string _trackName;
 	public string _trackArtist;
 
-	[SerializeField] private int _bpm;
+	[SerializeField] private float _bpm;
 
 }

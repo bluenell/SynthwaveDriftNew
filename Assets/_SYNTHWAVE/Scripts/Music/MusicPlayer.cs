@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicSelector : MonoBehaviour
+public class MusicPlayer : MonoBehaviour
 {
 	[SerializeField] private List<MusicTrack> _tracks = new List<MusicTrack>();
 
 	AudioSource _audioSource;
 
 
-	public static MusicSelector instance;
+	public static MusicPlayer instance;
 	public MusicTrack CurrentTrack;
 
 
@@ -24,9 +24,8 @@ public class MusicSelector : MonoBehaviour
 			instance = this;
 		}
 		
-
 		_audioSource = GetComponent<AudioSource>();
-		UpdateTrack(_tracks[Random.Range(0, _tracks.Count)]);
+		UpdateTrack(_tracks[Random.Range(0, _tracks.Count + 1)]);
 	}
 
 	private void UpdateTrack(MusicTrack track)
