@@ -10,6 +10,8 @@ public class RoadMotor : MonoBehaviour
 	
 	[SerializeField] CarCollider _carCollider;
 
+	public float RoadSpeed => _movementSpeed;
+
 	GameManager _gameManager;
 
 	private void Awake()

@@ -5,6 +5,8 @@ public class GameManager : MonoBehaviour
 	private bool _isAlive;
 	private bool _isInWarmupStage;
 
+	private float _timeAlive;
+
 	[SerializeField] private CarCollider _carCollider;
 	[SerializeField] private int _warmupStageLength;
 
@@ -17,6 +19,12 @@ public class GameManager : MonoBehaviour
 		_carCollider.Collided += EndCurrentGame;
 	}
 
+	private void Update()
+	{
+		_timeAlive += Time.deltaTime;
+		
+	}
+
 	void EndCurrentGame()
 	{
 		Debug.Log("End Game");
@@ -24,5 +32,11 @@ public class GameManager : MonoBehaviour
 		SceneSwitcher.SwitchScene(1);
 	}
 
+	public float GetDistanceTravelled()
+	{
+		RoadMotor roadGenerator = FindObjectOfType<RoadMotor>();
+
+		return roadGenerator.RoadSpeed * _timeAlive;
+	}
 
 }
