@@ -25,7 +25,7 @@ public class MusicPlayer : MonoBehaviour
 		}
 		
 		_audioSource = GetComponent<AudioSource>();
-		UpdateTrack(_tracks[4]);
+		UpdateTrack(_tracks[Random.Range(0, _tracks.Count + 1)]);
 	}
 
 	private void UpdateTrack(MusicTrack track)

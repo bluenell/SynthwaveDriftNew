@@ -9,23 +9,24 @@ public class CameraPulse : MonoBehaviour
 	private float _pulseFadeTime;
 	private float _pulsePower;
 
-	private Vector3 _startPosition;
+	private float _startingFOV;
+	private Camera _camera;
 
 	private void Awake()
 	{
-		_startPosition = transform.position;
+		_camera = GetComponent<Camera>();
+		_startingFOV = _camera.fieldOfView;
 	}
-
 
 	private void Update()
 	{
 		_timer += Time.deltaTime;
-		transform.position = _startPosition;
+		_camera.fieldOfView = _startingFOV;
 
 		if (_timer > MusicAnalyser.GetSecondsPerBeat(MusicPlayer.instance.CurrentTrack))
 		{
 			_timer = 0;
-			StartPulse(0.5f, 0.2f);
+			StartPulse(0.25f, 3f);
 		}
 	}
 
@@ -33,11 +34,9 @@ public class CameraPulse : MonoBehaviour
 	{
 		if (_beatTimeRemaining > 0)
 		{
-			float xAmount = Random.Range(-1f, 1f) * _pulsePower;
-			float yAmount = Random.Range(-1f, 1f) * _pulsePower;
+			float amount = 1 * _pulsePower;
 
-			transform.position += new Vector3(xAmount, yAmount, 0);
-
+			_camera.fieldOfView += amount;
 			_pulsePower = Mathf.MoveTowards(_pulsePower, 0, _pulseFadeTime * Time.deltaTime);
 		}		
 	}
@@ -46,7 +45,6 @@ public class CameraPulse : MonoBehaviour
 	{
 		_pulsePower = power;
 		_beatTimeRemaining = length;
-
 		_pulseFadeTime = power / length;
 	}
 
