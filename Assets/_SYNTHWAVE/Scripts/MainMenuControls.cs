@@ -1,13 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class MainMenuControls : MonoBehaviour
 {
 	public void PlayGame()
 	{
-		SceneManager.LoadScene(1);
+		SceneSwitcher.SwitchScene(1);
 	}
 
 	public void QuitGame()

@@ -10,21 +10,30 @@ public class RoadMotor : MonoBehaviour
 	
 	[SerializeField] CarCollider _carCollider;
 
+	public float RoadSpeed => _movementSpeed;
+
+	GameManager _gameManager;
+
 	private void Awake()
 	{
 		_carCollider = FindObjectOfType<CarCollider>();
+		_gameManager = FindObjectOfType<GameManager>();
 		_carCollider.Collided += StopMovement;
 	}
 
 	private void FixedUpdate()	
 	{
-		float speed = CalculateRoadSpeed(MusicPlayer.instance.CurrentTrack);
-		Debug.Log($"Road speed: {speed}");
+		_movementSpeed = CalculateRoadSpeed(MusicPlayer.instance.CurrentTrack);
+		Debug.Log($"Road speed: {_movementSpeed}");
 
-		transform.Translate(new Vector3(0, 0, -speed * Time.deltaTime));	
+
+		transform.Translate(new Vector3(0, 0, -_movementSpeed * Time.deltaTime));
 	}
 
-	public void StopMovement()	{	_movementSpeed = 0;	}
+	public void StopMovement()	
+	{
+		_movementSpeed = 0;	
+	}
 
 	private void OnDisable()	{	_carCollider.Collided -= StopMovement;	}
 
