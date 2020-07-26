@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
 
 	[Header("Game Settings")]
-	[SerializeField] private int _warmupStageLength;
+	[SerializeField][Range(0,10)] private int _warmupStageLength;
 
 	public bool IsAlive => _isAlive;
 	public bool IsInWarmupStage { get => _isInWarmupStage; set => _isInWarmupStage = value; }

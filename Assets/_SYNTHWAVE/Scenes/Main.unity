@@ -806,7 +806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _carCollider: {fileID: 1664658458}
-  _warmupStageLength: 3
+  _warmupStageLength: 1
 --- !u!4 &781611420
 Transform:
   m_ObjectHideFlags: 0
@@ -1285,6 +1285,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ffb15441d73089248b3da82e723b9b43, type: 2}
   - {fileID: 11400000, guid: ed3406049ca0d8542bbd824f589a8bd2, type: 2}
   - {fileID: 11400000, guid: e129004559c9c144b9b7565be40c1985, type: 2}
+  - {fileID: 11400000, guid: 9935b25b6e8c59b40a91f934b46713e6, type: 2}
   CurrentTrack: {fileID: 11400000, guid: e129004559c9c144b9b7565be40c1985, type: 2}
 --- !u!1 &1353765647
 GameObject:
