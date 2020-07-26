@@ -806,7 +806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _carCollider: {fileID: 1664658458}
-  _warmupStageLength: 5
+  _warmupStageLength: 3
 --- !u!4 &781611420
 Transform:
   m_ObjectHideFlags: 0

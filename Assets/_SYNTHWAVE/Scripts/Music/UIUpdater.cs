@@ -23,7 +23,7 @@ public class UIUpdater : MonoBehaviour
 	private void Update()
 	{
 
-		_distanceTravelledText.text = ($"{Math.Round(_gameManager.GetDistanceTravelled(),1)} m");
+		_distanceTravelledText.text = ($"{(int)_gameManager.GetDistanceTravelled()} m");
 	}
 
 }
