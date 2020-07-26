@@ -10,7 +10,7 @@ public class CarSpawner : MonoBehaviour
 
 	private void Awake()
 	{
-		SpawnCar(Random.Range(0, _cars.Count +1));
+		SpawnCar(Random.Range(0, _cars.Count));
 	}
 
 	private void SpawnCar(int index)
