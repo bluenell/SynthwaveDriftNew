@@ -3,21 +3,18 @@
 public class GameManager : MonoBehaviour
 {
 	private bool _isAlive;
-	[SerializeField] private CarCollider _carCollider;
+	private bool _isInWarmupStage;
 
+	[SerializeField] private CarCollider _carCollider;
+	[SerializeField] private int _warmupStageLength;
+
+	public bool IsAlive => _isAlive;
+	public bool IsInWarmupStage { get => _isInWarmupStage; set => _isInWarmupStage = value; }
+	[HideInInspector] public int WarmupStageLength => _warmupStageLength;
 
 	private void Awake()
 	{
 		_carCollider.Collided += EndCurrentGame;
-	}
-
-	public bool IsAlive 
-	{
-		get 
-		{ 
-			return _isAlive; 
-		} 
-
 	}
 
 	void EndCurrentGame()

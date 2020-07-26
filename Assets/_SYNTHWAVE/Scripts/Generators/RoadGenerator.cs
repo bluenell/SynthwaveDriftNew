@@ -8,7 +8,7 @@ public class RoadGenerator : MonoBehaviour
 	[SerializeField] private int _maxRoadsOnScreen;             // The maximum number of roads that can be active at one time
 	[SerializeField] private float _newSpawnDistance;                       // The point in which a new road will spawn
 	[SerializeField] private float _maxDistance;                   // The maximum distance that parent road can move before being reset
-	                               
+	[SerializeField] private bool _generateWithObstacles;                               
 
 	[Header("Road Objects")]
 	[SerializeField] private GameObject[] _roads;
@@ -16,17 +16,26 @@ public class RoadGenerator : MonoBehaviour
 
 	private List<GameObject> _activeRoads;
 	private float _spawnZ;                                          // The Z position for where the next road will spawn
+	private GameManager _gameManager;
 
-	public float RoadSize; 
+	public float RoadSize;
+	[HideInInspector] public bool GenerateWithObstacles => _generateWithObstacles;
 
 	private void Awake()
 	{
 		// Creating a new list of currently active roads (the roads that are in the scene at the moment)
 		_activeRoads = new List<GameObject>();
+		_gameManager = FindObjectOfType<GameManager>();
 		// Initilizing the game, creating the first set of roads. Can be changed with maxRoadsOnScreen)
+
+		_generateWithObstacles = false;
 
 		for (int i = 0; i < _maxRoadsOnScreen; i++)
 		{
+			if (i > _gameManager.WarmupStageLength)
+			{
+				_generateWithObstacles = true;
+			}
 			GenerateRoad(Random.Range(0, _roads.Length));
 		}
 	}
@@ -49,8 +58,7 @@ public class RoadGenerator : MonoBehaviour
 			// ResetRoad(); 
 		}
 	}
-
-
+	
 	void GenerateRoad(int roadIndex)
 	{
 		// Creating a new road prefab
