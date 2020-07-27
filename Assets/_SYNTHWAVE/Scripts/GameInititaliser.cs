@@ -10,9 +10,11 @@ public class GameInititaliser : MonoBehaviour
     private CarInput _carInput;
     private CameraPulse _cameraPulse;
     private MusicPlayer _musicPlayer;
+    private GameManager _gameManager;
+    private CameraHandler _cameraHandler;
 
     // UI
-    private GameObject _gameplayPanel;
+    [SerializeField] private GameObject _gameplayPanel;
 
 	private void Awake()
 	{
@@ -23,7 +25,16 @@ public class GameInititaliser : MonoBehaviour
         _carInput = FindObjectOfType<CarInput>();
         _cameraPulse = FindObjectOfType<CameraPulse>();
         _musicPlayer = FindObjectOfType<MusicPlayer>();
+        _gameManager = FindObjectOfType<GameManager>();
+        _cameraHandler = FindObjectOfType<CameraHandler>();
+        
+
     }
+
+	private void Start()
+	{
+        _gameManager.IsInShop = true;
+	}
 
 	public void StartGame()
 	{
@@ -36,6 +47,12 @@ public class GameInititaliser : MonoBehaviour
         _musicPlayer.enabled = true;
 
         _gameplayPanel.SetActive(true);
+
+        _gameManager.IsInShop = false;
+
+        _cameraHandler.SwitchToGameplayCamera();
+
+        
 
     }
 

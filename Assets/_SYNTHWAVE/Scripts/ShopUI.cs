@@ -33,7 +33,9 @@ public class ShopUI : MonoBehaviour
 
 	public void PlayGame()
 	{
+		this.gameObject.SetActive(false);
 		_gameInit.StartGame();		
+		
 
 	}
 }

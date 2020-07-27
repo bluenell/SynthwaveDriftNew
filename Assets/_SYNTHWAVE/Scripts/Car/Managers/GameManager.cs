@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
 	[SerializeField] private CarCollider _carCollider;
 
+	CameraHandler _cameraHandler;
+
 
 	[Header("Game Settings")]
 	[SerializeField] [Range(0, 10)] private int _warmupStageLength;
@@ -18,11 +20,12 @@ public class GameManager : MonoBehaviour
 	public int WarmupStageLength => _warmupStageLength;
 
 	private bool _isInShop;
-	public bool IsInShop => _isInShop;
+	public bool IsInShop { get => _isInShop; set => _isInShop = value; }
 
 	
 	private void Awake()
 	{
+		_cameraHandler = FindObjectOfType<CameraHandler>();
 		_carCollider.Collided += EndCurrentGame;
 	}
 

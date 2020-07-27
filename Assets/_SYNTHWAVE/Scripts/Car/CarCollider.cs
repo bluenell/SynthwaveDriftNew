@@ -25,7 +25,7 @@ public class CarCollider : MonoBehaviour
 
 			if (obstacle != null)
 			{
-				Debug.Log("Hit");
+				Debug.Log("Hit" + hit.collider.gameObject.name) ;
 				Collided.Invoke();		
 			}
 
