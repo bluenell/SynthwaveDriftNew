@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
 
 	CameraHandler _cameraHandler;
 
-
 	[Header("Game Settings")]
 	[SerializeField] [Range(0, 10)] private int _warmupStageLength;
 
@@ -22,7 +21,6 @@ public class GameManager : MonoBehaviour
 	private bool _isInShop;
 	public bool IsInShop { get => _isInShop; set => _isInShop = value; }
 
-	
 	private void Awake()
 	{
 		_cameraHandler = FindObjectOfType<CameraHandler>();

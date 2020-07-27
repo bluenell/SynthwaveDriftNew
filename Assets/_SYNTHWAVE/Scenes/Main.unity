@@ -1309,7 +1309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _carCollider: {fileID: 1664658458}
-  _warmupStageLength: 5
+  _warmupStageLength: 10
 --- !u!4 &781611420
 Transform:
   m_ObjectHideFlags: 0
@@ -2718,7 +2718,7 @@ PrefabInstance:
     - target: {fileID: 7886923479824636115, guid: e07f2c159b3e3454393137b0405a0982,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e07f2c159b3e3454393137b0405a0982, type: 3}
@@ -2874,7 +2874,7 @@ Transform:
   - {fileID: 1104712836}
   m_Father: {fileID: 469676349}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 26.832, y: 140.50601, z: 0}
+  m_LocalEulerAnglesHint: {x: 18.933, y: 158.23001, z: 0.84200007}
 --- !u!1001 &1537762400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2948,6 +2948,11 @@ PrefabInstance:
       value: TEST ROAD (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4378151579758327509, guid: 96a20ae8847abb842bf0a818abcb3c0e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333245978151196231, guid: 96a20ae8847abb842bf0a818abcb3c0e,
         type: 3}
       propertyPath: m_IsActive
       value: 1
