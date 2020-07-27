@@ -9,6 +9,7 @@ public class UIUpdater : MonoBehaviour
 
 	[SerializeField] private TMPro.TextMeshProUGUI _songNameText;
 	[SerializeField] private TMPro.TextMeshProUGUI _distanceTravelledText;
+	[SerializeField] private TMPro.TextMeshProUGUI _cassettesText;
 
 	private void Awake()
 	{
@@ -22,8 +23,8 @@ public class UIUpdater : MonoBehaviour
 
 	private void Update()
 	{
-
 		_distanceTravelledText.text = ($"{(int)_gameManager.GetDistanceTravelled()} m");
+		_cassettesText.text = PlayerStats.CurrentCassettes.ToString();
 	}
 
 }

@@ -11,12 +11,16 @@ public class GameManager : MonoBehaviour
 
 
 	[Header("Game Settings")]
-	[SerializeField][Range(0,10)] private int _warmupStageLength;
+	[SerializeField] [Range(0, 10)] private int _warmupStageLength;
 
 	public bool IsAlive => _isAlive;
 	public bool IsInWarmupStage { get => _isInWarmupStage; set => _isInWarmupStage = value; }
 	public int WarmupStageLength => _warmupStageLength;
 
+	private bool _isInShop;
+	public bool IsInShop => _isInShop;
+
+	
 	private void Awake()
 	{
 		_carCollider.Collided += EndCurrentGame;
@@ -24,8 +28,12 @@ public class GameManager : MonoBehaviour
 
 	private void Update()
 	{
-		_timeAlive += Time.deltaTime;		
+		if (!_isInShop)
+		{
+			_timeAlive += Time.deltaTime;
+		}		
 	}
+
 
 	void EndCurrentGame()
 	{
@@ -39,5 +47,4 @@ public class GameManager : MonoBehaviour
 		RoadMotor roadGenerator = FindObjectOfType<RoadMotor>();
 		return roadGenerator.RoadSpeed * _timeAlive;
 	}
-
 }

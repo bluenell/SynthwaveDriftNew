@@ -1,17 +1,16 @@
-﻿using Boo.Lang;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
-public static class CarsDataContainer
+public  class CarsDataContainer : MonoBehaviour
 {
-	private static List<Car> _unlockedCars;
-	public static List<Car> UnlockedCars => _unlockedCars;
+	public List<Car> UnlockedCars;
+	public List<Car> LockedCars;
 
-	private static List<Car> _lockedCars;
-	public static List<Car> LockedCars => _lockedCars;
-
-	public static void UnlockCar(Car carToUnlock)
+	public void UnlockCar(Car carToUnlock)
 	{
-		_lockedCars.Remove(carToUnlock);
-		_unlockedCars.Add(carToUnlock);		
+		UnlockedCars.Add(carToUnlock);
+		LockedCars.Remove(carToUnlock);
+		
 	}
 
 

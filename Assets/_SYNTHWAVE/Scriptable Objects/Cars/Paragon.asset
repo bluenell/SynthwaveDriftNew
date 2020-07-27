@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be643dd86582e5489648640f942ff28, type: 3}
   m_Name: Paragon
   m_EditorClassIdentifier: 
-  _name: The Paragon
-  _id: 0
-  _carGameObject: {fileID: 7886923479824636115, guid: e07f2c159b3e3454393137b0405a0982,
+  CarName: Paragon
+  Id: 1
+  CarGameObject: {fileID: 7886923479824636115, guid: e07f2c159b3e3454393137b0405a0982,
     type: 3}
+  _cassettesNeededToPurchase: 0
+  _carUnlocked: 1
+  _carPurchased: 1

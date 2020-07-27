@@ -3,14 +3,14 @@
 public class Car : ScriptableObject
 {
 	[Header("Car Info")]
-	public string _name;
-	public int _id;
-	public GameObject _carGameObject;
+	public string CarName;
+	public int Id;
+	public GameObject CarGameObject;
 
 	[Header("Purchasing Info")]
-	int _cassettesNeededToPurchase;
-	bool _carUnlocked;
-	bool _carPurchased;
+	[SerializeField] int _cassettesNeededToPurchase;
+	[SerializeField] bool _carUnlocked;
+	[SerializeField] bool _carPurchased;
 
 	public int CassettesNeededToPurchase => _cassettesNeededToPurchase;
 	public bool IsCarUnlocked => _carUnlocked;
@@ -20,7 +20,11 @@ public class Car : ScriptableObject
 	{
 		_carPurchased = true;
 		PlayerStats.SpendCassetes(_cassettesNeededToPurchase);
-		CarsDataContainer.UnlockCar(this);
+	}
+
+	public void UnlockCar()
+	{
+		_carUnlocked = true;
 	}
 
 
