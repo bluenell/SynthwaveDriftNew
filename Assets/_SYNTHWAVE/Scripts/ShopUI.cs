@@ -10,7 +10,7 @@ public class ShopUI : MonoBehaviour
 
 	private void Start()
 	{
-		
+		_carNameText.text = _carSpawner.SelectedCar.CarName.ToUpper() ;
 	}
 
 	private void Awake()

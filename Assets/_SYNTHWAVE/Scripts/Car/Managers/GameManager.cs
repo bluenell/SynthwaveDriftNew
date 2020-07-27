@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 	{
 		Debug.Log("End Game");
 		_isAlive = false;
-		SceneSwitcher.SwitchScene(1);
+		SceneSwitcher.SwitchScene(0);
 	}
 
 	public float GetDistanceTravelled()
