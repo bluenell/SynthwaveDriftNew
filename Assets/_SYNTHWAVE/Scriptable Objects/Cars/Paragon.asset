@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be643dd86582e5489648640f942ff28, type: 3}
+  m_Name: Paragon
+  m_EditorClassIdentifier: 
+  _name: The Paragon
+  _id: 0
+  _carGameObject: {fileID: 7886923479824636115, guid: e07f2c159b3e3454393137b0405a0982,
+    type: 3}

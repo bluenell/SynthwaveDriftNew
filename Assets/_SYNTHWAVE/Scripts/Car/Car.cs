@@ -1,4 +1,5 @@
-﻿using UnityEngine; 
+﻿using UnityEngine;
+[CreateAssetMenu(menuName = "ScriptableObjects/Car")]
 public class Car : ScriptableObject
 {
 	[Header("Car Info")]
@@ -11,7 +12,6 @@ public class Car : ScriptableObject
 	bool _carUnlocked;
 	bool _carPurchased;
 
-
 	public int CassettesNeededToPurchase => _cassettesNeededToPurchase;
 	public bool IsCarUnlocked => _carUnlocked;
 	public bool IsCarPurchased => _carPurchased;
@@ -20,6 +20,7 @@ public class Car : ScriptableObject
 	{
 		_carPurchased = true;
 		PlayerStats.SpendCassetes(_cassettesNeededToPurchase);
+		CarsDataContainer.UnlockCar(this);
 	}
 
 
