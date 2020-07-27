@@ -10,18 +10,18 @@ public class CameraPulse : MonoBehaviour
 	private float _pulsePower;
 
 	private float _startingFOV;
-	private Camera _camera;
+	private Cinemachine.CinemachineVirtualCamera _camera;
 
 	private void Awake()
 	{
-		_camera = GetComponent<Camera>();
-		_startingFOV = _camera.fieldOfView;
+		_camera = GetComponent<Cinemachine.CinemachineVirtualCamera>();
+		_startingFOV = _camera.m_Lens.FieldOfView;
 	}
 
 	private void Update()
 	{
 		_timer += Time.deltaTime;
-		_camera.fieldOfView = _startingFOV;
+		_camera.m_Lens.FieldOfView = _startingFOV;
 
 		if (_timer > MusicAnalyser.GetSecondsPerBeat(MusicPlayer.instance.CurrentTrack))
 		{
@@ -36,7 +36,7 @@ public class CameraPulse : MonoBehaviour
 		{
 			float amount = 1 * _pulsePower;
 
-			_camera.fieldOfView += amount;
+			_camera.m_Lens.FieldOfView += amount;
 			_pulsePower = Mathf.MoveTowards(_pulsePower, 0, _pulseFadeTime * Time.deltaTime);
 		}		
 	}
