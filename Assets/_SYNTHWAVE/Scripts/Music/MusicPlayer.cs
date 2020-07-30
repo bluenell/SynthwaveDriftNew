@@ -12,7 +12,6 @@ public class MusicPlayer : MonoBehaviour
 	public static MusicPlayer instance;
 	public MusicTrack CurrentTrack;
 
-
 	private void Awake()
 	{
 		if (instance != null)
@@ -25,7 +24,12 @@ public class MusicPlayer : MonoBehaviour
 		}
 		
 		_audioSource = GetComponent<AudioSource>();
-		UpdateTrack(_tracks[Random.Range(0, _tracks.Count + 1)]);
+		
+	}
+
+	private void Start()
+	{
+		UpdateTrack(_tracks[Random.Range(0, _tracks.Count)]);
 	}
 
 	private void UpdateTrack(MusicTrack track)

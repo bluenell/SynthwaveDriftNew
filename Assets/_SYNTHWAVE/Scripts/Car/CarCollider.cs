@@ -19,13 +19,14 @@ public class CarCollider : MonoBehaviour
 
 		Debug.DrawLine(transform.position, new Vector3(transform.position.x, transform.position.y, transform.position.z + _raycastOffset), Color.red);
 
+
 		if (Physics.Raycast(ray, out hit))
 		{
 			Obstacle obstacle = hit.collider.gameObject.GetComponent<Obstacle>();
 
 			if (obstacle != null)
 			{
-				Debug.Log("Hit");
+				Debug.Log("Hit " + hit.collider.gameObject.name) ;
 				Collided.Invoke();		
 			}
 

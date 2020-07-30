@@ -5,7 +5,8 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: RetroSkybox
   m_Shader: {fileID: 4800000, guid: dfa17a30b23e94b049ffccdb334d21bc, type: 3}
   m_ShaderKeywords: _EMISSION _SUNENABLED_ON
@@ -90,7 +91,7 @@ Material:
     - _SunEnabled: 1
     - _SunExponent: 5
     - _SunPitch: 90
-    - _SunSize: 0.01
+    - _SunSize: 0.0513
     - _SunYaw: 0
     - _UVSec: 0
     - _ZWrite: 1

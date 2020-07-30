@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be643dd86582e5489648640f942ff28, type: 3}
+  m_Name: The Takumi
+  m_EditorClassIdentifier: 
+  CarName: The Takumi
+  Id: 0
+  CarGameObject: {fileID: 8558166819999144617, guid: 791781646d3b30a4d9ccaa34a3e9798e,
+    type: 3}
+  _cassettesNeededToPurchase: 0
+  CurrentUnlockState: 0
