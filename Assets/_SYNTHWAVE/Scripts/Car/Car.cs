@@ -9,22 +9,27 @@ public class Car : ScriptableObject
 
 	[Header("Purchasing Info")]
 	[SerializeField] int _cassettesNeededToPurchase;
-	[SerializeField] bool _carUnlocked;
-	[SerializeField] bool _carPurchased;
+	
+	public enum UnlockState
+	{
+		Playable,
+		Purchasable,
+		Locked
+	};
+
+	public UnlockState CurrentUnlockState;
 
 	public int CassettesNeededToPurchase => _cassettesNeededToPurchase;
-	public bool IsCarUnlocked => _carUnlocked;
-	public bool IsCarPurchased => _carPurchased;
 
 	public void PurchaseCar()
 	{
-		_carPurchased = true;
+		CurrentUnlockState = UnlockState.Playable;
 		PlayerStats.SpendCassetes(_cassettesNeededToPurchase);
 	}
 
 	public void UnlockCar()
 	{
-		_carUnlocked = true;
+		CurrentUnlockState = UnlockState.Purchasable;
 	}
 
 

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8be643dd86582e5489648640f942ff28, type: 3}
-  m_Name: The Renegade
+  m_Name: The Falcon
   m_EditorClassIdentifier: 
-  CarName: The Renegade
-  Id: 3
-  CarGameObject: {fileID: 6999659586931966846, guid: 8d8a007c67551a6489de7936d24f272e,
+  CarName: The Falcon
+  Id: 0
+  CarGameObject: {fileID: 3599861755143744367, guid: a1adcecd9756a5c4393b5f194325d977,
     type: 3}
-  _cassettesNeededToPurchase: 0
+  _cassettesNeededToPurchase: 1000
   CurrentUnlockState: 0

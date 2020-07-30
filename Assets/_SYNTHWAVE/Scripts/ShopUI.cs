@@ -6,7 +6,14 @@ public class ShopUI : MonoBehaviour
 
 	private CarSpawner _carSpawner;
 	private GameInititaliser _gameInit;
+	private CarsDataContainer _carData;
+
 	[SerializeField] private TextMeshProUGUI _carNameText;
+
+	[SerializeField] private TextMeshProUGUI _currentCassettes;
+	[SerializeField] private TextMeshProUGUI _cassettesToBuy;
+
+
 
 	private void Start()
 	{
@@ -34,8 +41,21 @@ public class ShopUI : MonoBehaviour
 	public void PlayGame()
 	{
 		this.gameObject.SetActive(false);
-		_gameInit.StartGame();		
-		
+		_gameInit.StartGame();			
 
 	}
+
+	private void Update()
+	{
+		_currentCassettes.text = PlayerStats.CurrentCassettes.ToString();
+		_cassettesToBuy.text = _carSpawner.SelectedCar.CassettesNeededToPurchase.ToString();
+	}
+
+	public void BuyCar()
+	{
+		PlayerStats.SpendCassetes(_carSpawner.SelectedCar.CassettesNeededToPurchase);	
+
+
+	}
+
 }

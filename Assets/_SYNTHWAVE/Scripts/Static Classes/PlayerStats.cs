@@ -2,7 +2,7 @@
 
 public static class PlayerStats
 {
-	private static int _currentCassettes;
+	private static int _currentCassettes = 1000;
 	private static int _topScore;
 	public static int CurrentCassettes { get => _currentCassettes; private set => _currentCassettes = value; } 
 

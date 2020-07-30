@@ -45,9 +45,7 @@ public class GameInititaliser : MonoBehaviour
         _roadMotor.enabled = true;
         _cameraPulse.enabled = true;
         _musicPlayer.enabled = true;
-
         _gameplayPanel.SetActive(true);
-
         _gameManager.IsInShop = false;
 
         _cameraHandler.SwitchToGameplayCamera();

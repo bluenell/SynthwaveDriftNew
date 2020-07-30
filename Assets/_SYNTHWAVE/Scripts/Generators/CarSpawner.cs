@@ -17,10 +17,12 @@ public class CarSpawner : MonoBehaviour
 	private void Awake()
 	{
 		_carsDataContainer = FindObjectOfType<CarsDataContainer>();
+	}
 
-		_selectedCar = _carsDataContainer.UnlockedCars[_carIndex];
+	private void Start()
+	{
+		_selectedCar = _carsDataContainer.PlayableCars[_carIndex];
 		SpawnCar();
-
 	}
 
 	private void SpawnCar()
@@ -38,12 +40,12 @@ public class CarSpawner : MonoBehaviour
 
 		_carIndex++;
 
-		if (_carIndex > _carsDataContainer.UnlockedCars.Count - 1)
+		if (_carIndex > _carsDataContainer.PlayableCars.Count - 1)
 		{
 			_carIndex = 0;
 		}
 
-		_selectedCar = _carsDataContainer.UnlockedCars[_carIndex];
+		_selectedCar = _carsDataContainer.PlayableCars[_carIndex];
 		SpawnCar();
 	}
 
@@ -55,9 +57,9 @@ public class CarSpawner : MonoBehaviour
 
 		if (_carIndex < 0)
 		{
-			_carIndex = _carsDataContainer.UnlockedCars.Count - 1;
+			_carIndex = _carsDataContainer.PlayableCars.Count - 1;
 		}
-		_selectedCar = _carsDataContainer.UnlockedCars[_carIndex];
+		_selectedCar = _carsDataContainer.PlayableCars[_carIndex];
 		SpawnCar();
 	}
 
