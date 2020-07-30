@@ -10,6 +10,7 @@ public class CarSpawner : MonoBehaviour
 	private CarsDataContainer _carsDataContainer;
 	private Car _selectedCar;
 
+	[SerializeField] private List<Car> _carsInShop;
 
 	public Car SelectedCar => _selectedCar;
 
@@ -21,7 +22,22 @@ public class CarSpawner : MonoBehaviour
 
 	private void Start()
 	{
-		_selectedCar = _carsDataContainer.PlayableCars[_carIndex];
+		foreach (Car car in _carsDataContainer.PlayableCars)
+		{
+			_carsInShop.Add(car);
+		}
+
+		foreach (Car car in _carsDataContainer.PurchasableCars)
+		{
+			_carsInShop.Add(car);
+		}
+
+		foreach (Car car in _carsDataContainer.LockedCars)
+		{
+			_carsInShop.Add(car);
+		}
+
+		_selectedCar = _carsInShop[_carIndex];
 		SpawnCar();
 	}
 
@@ -40,12 +56,12 @@ public class CarSpawner : MonoBehaviour
 
 		_carIndex++;
 
-		if (_carIndex > _carsDataContainer.PlayableCars.Count - 1)
+		if (_carIndex > _carsInShop.Count - 1)
 		{
 			_carIndex = 0;
 		}
 
-		_selectedCar = _carsDataContainer.PlayableCars[_carIndex];
+		_selectedCar = _carsInShop[_carIndex];
 		SpawnCar();
 	}
 
@@ -57,9 +73,10 @@ public class CarSpawner : MonoBehaviour
 
 		if (_carIndex < 0)
 		{
-			_carIndex = _carsDataContainer.PlayableCars.Count - 1;
+			_carIndex = _carsInShop.Count - 1;
 		}
-		_selectedCar = _carsDataContainer.PlayableCars[_carIndex];
+		_selectedCar = _carsInShop[_carIndex];
+
 		SpawnCar();
 	}
 
