@@ -24,7 +24,6 @@ public class Car : ScriptableObject
 	public void PurchaseCar()
 	{
 		CurrentUnlockState = UnlockState.Playable;
-		PlayerStats.SpendCassetes(_cassettesNeededToPurchase);
 	}
 
 	public void UnlockCar()

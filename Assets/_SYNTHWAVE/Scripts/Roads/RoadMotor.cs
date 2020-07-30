@@ -6,7 +6,6 @@ public class RoadMotor : MonoBehaviour
 {
 	[SerializeField] float _movementSpeed;
 	[SerializeField] float _speedMultiplier;	
-
 	
 	[SerializeField] CarCollider _carCollider;
 
@@ -24,8 +23,8 @@ public class RoadMotor : MonoBehaviour
 	private void FixedUpdate()	
 	{
 		_movementSpeed = CalculateRoadSpeed(MusicPlayer.instance.CurrentTrack);
-		//Debug.Log($"Road speed: {_movementSpeed}");
 
+		//Debug.Log($"Road speed: {_movementSpeed}");
 
 		transform.Translate(new Vector3(0, 0, -_movementSpeed * Time.deltaTime));
 	}

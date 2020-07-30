@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1666103832518255316}
-  - component: {fileID: 5937297185333004748}
   m_Layer: 0
   m_Name: cassette tape
   m_TagString: Untagged
@@ -33,21 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5937297185333004748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2397156639623614663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a191ed4234b04fa45960db99fcdedc89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rotationAmount: 50
-  _movementSpeed: 1
-  _movementHeight: 1
 --- !u!1 &3176736263923580912
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +120,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3e9c42fcc7843154d8e37fd69f8865f9, type: 2}
+  - {fileID: 2100000, guid: 7eb57d2631bae894384a9a14403dc382, type: 2}
   - {fileID: 2100000, guid: 15e305b7ffef3384b994c67a99b191a7, type: 2}
   - {fileID: 2100000, guid: 15e305b7ffef3384b994c67a99b191a7, type: 2}
   - {fileID: 7073729327302131631, guid: acf37b2c54adc624cbebed78c22aa203, type: 3}

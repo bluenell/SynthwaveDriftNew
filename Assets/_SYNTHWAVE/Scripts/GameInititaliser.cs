@@ -38,7 +38,6 @@ public class GameInititaliser : MonoBehaviour
 
 	public void StartGame()
 	{
-       // _carCollider.enabled = true;
         _carInput.enabled = true;
         _carMovement.enabled = true;
         _roadGenerator.enabled = true;

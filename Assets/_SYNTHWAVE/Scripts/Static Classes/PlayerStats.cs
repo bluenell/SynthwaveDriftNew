@@ -1,16 +1,20 @@
 ﻿using UnityEngine;
 
-public static class PlayerStats
-{
-	private static int _currentCassettes = 1000;
-	private static int _topScore;
-	public static int CurrentCassettes { get => _currentCassettes; private set => _currentCassettes = value; } 
+[CreateAssetMenu(menuName = "ScriptableObjects/PlayerStats")]
 
-	public static void SpendCassetes(int value)
+public class PlayerStats : ScriptableObject
+{
+	
+   [SerializeField]	private int _totalCassettes;
+
+	private int _topScore;
+	public int TotalCassettes { get => _totalCassettes; } 
+
+	public void SpendCassetes(int value)
 	{
-		if (value < _currentCassettes)
+		if (value < _totalCassettes)
 		{
-			_currentCassettes -= value;
+			_totalCassettes -= value;
 		}
 		else
 		{
@@ -18,9 +22,9 @@ public static class PlayerStats
 		}		
 	}
 
-	public static void IncreaseCassettes(int value)
+	public void IncreaseCassettes(int value)
 	{
-		_currentCassettes += value;
+		_totalCassettes += value;
 	}
 
 }

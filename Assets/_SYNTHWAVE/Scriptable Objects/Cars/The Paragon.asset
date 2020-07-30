@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: The Paragon
   m_EditorClassIdentifier: 
   CarName: The Paragon
-  Id: 1
+  Id: 3
   CarGameObject: {fileID: 7886923479824636115, guid: e07f2c159b3e3454393137b0405a0982,
     type: 3}
-  _cassettesNeededToPurchase: 0
+  _cassettesNeededToPurchase: 350
   CurrentUnlockState: 1

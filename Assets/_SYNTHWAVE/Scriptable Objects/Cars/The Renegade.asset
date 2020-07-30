@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: The Renegade
   m_EditorClassIdentifier: 
   CarName: The Renegade
-  Id: 3
+  Id: 4
   CarGameObject: {fileID: 6999659586931966846, guid: 8d8a007c67551a6489de7936d24f272e,
     type: 3}
-  _cassettesNeededToPurchase: 0
-  CurrentUnlockState: 0
+  _cassettesNeededToPurchase: 100
+  CurrentUnlockState: 1

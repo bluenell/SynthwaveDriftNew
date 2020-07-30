@@ -7,7 +7,8 @@ public class ShopUI : MonoBehaviour
 
 	private CarSpawner _carSpawner;
 	private GameInititaliser _gameInit;
-
+	private PlayerStatsManager _playerStatsManager;
+	
 	[SerializeField] private TextMeshProUGUI _carNameText;
 
 	[SerializeField] private TextMeshProUGUI _currentCassettes;
@@ -22,18 +23,20 @@ public class ShopUI : MonoBehaviour
 
 	private void Start()
 	{
-		_carNameText.text = _carSpawner.SelectedCar.CarName.ToUpper();
+		
 	}
 
 	private void Awake()
 	{
 		_gameInit = FindObjectOfType<GameInititaliser>();
 		_carSpawner = FindObjectOfType<CarSpawner>();
+		_playerStatsManager = FindObjectOfType<PlayerStatsManager>();
 	}
 
 	private void Update()
 	{
-		_currentCassettes.text = PlayerStats.CurrentCassettes.ToString();
+		_currentCassettes.text = _playerStatsManager.PlayerStats.TotalCassettes.ToString();
+		_carNameText.text = _carSpawner.SelectedCar.CarName.ToUpper();
 		_cassettesToBuy.text = _carSpawner.SelectedCar.CassettesNeededToPurchase.ToString();
 		CheckCarUnlockStatus();
 
@@ -69,13 +72,11 @@ public class ShopUI : MonoBehaviour
 	public void CycleRight()
 	{
 		_carSpawner.LoadNextCar();
-		_carNameText.text = _carSpawner.SelectedCar.CarName.ToUpper();
 	}
 
 	public void CycleLeft()
 	{
 		_carSpawner.LoadPreviousCar();
-		_carNameText.text = _carSpawner.SelectedCar.CarName.ToUpper();
 	}
 
 	public void PlayGame()
@@ -85,11 +86,18 @@ public class ShopUI : MonoBehaviour
 
 	}
 
-
-
 	public void BuyCar()
 	{
-		PlayerStats.SpendCassetes(_carSpawner.SelectedCar.CassettesNeededToPurchase);	
+		int cassetesToBuy = _carSpawner.SelectedCar.CassettesNeededToPurchase;
+		int totalCassetes = _playerStatsManager.PlayerStats.TotalCassettes;
+		
+		if (cassetesToBuy <= totalCassetes)
+		{
+			_playerStatsManager.PlayerStats.SpendCassetes(cassetesToBuy);
+			_carSpawner.SelectedCar.PurchaseCar();
+			CheckCarUnlockStatus();
+		}
+		
 
 
 	}
