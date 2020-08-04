@@ -20,18 +20,27 @@ public class ShopUI : MonoBehaviour
 	[SerializeField] private GameObject _lockedText;
 
 
-
-	private void Start()
-	{
-		
-	}
-
 	private void Awake()
 	{
 		_gameInit = FindObjectOfType<GameInititaliser>();
 		_carSpawner = FindObjectOfType<CarSpawner>();
 		_playerStatsManager = FindObjectOfType<PlayerStatsManager>();
+
+
 	}
+
+	private void Start()
+	{
+		if (PlayerPrefs.HasKey(PlayerPrefKeys.TotalCassettes))
+		{
+			_currentCassettes.text = PlayerPrefs.GetInt(PlayerPrefKeys.TotalCassettes).ToString();
+		}
+		else
+		{
+			PlayerPrefs.SetInt(PlayerPrefKeys.TotalCassettes, _playerStatsManager.PlayerStats.TotalCassettes);
+		}
+	}
+
 
 	private void Update()
 	{

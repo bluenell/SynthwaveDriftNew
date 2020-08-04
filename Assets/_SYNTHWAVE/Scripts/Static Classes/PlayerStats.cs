@@ -8,7 +8,9 @@ public class PlayerStats : ScriptableObject
    [SerializeField]	private int _totalCassettes;
 
 	private int _topScore;
-	public int TotalCassettes { get => _totalCassettes; } 
+	public int TotalCassettes { get => _totalCassettes; set => _totalCassettes = value; } 
+
+	
 
 	public void SpendCassetes(int value)
 	{

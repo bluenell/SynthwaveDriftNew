@@ -16,5 +16,5 @@ MonoBehaviour:
   Id: 4
   CarGameObject: {fileID: 6999659586931966846, guid: 8d8a007c67551a6489de7936d24f272e,
     type: 3}
-  _cassettesNeededToPurchase: 100
+  _cassettesNeededToPurchase: 500
   CurrentUnlockState: 1

@@ -1,20 +1,19 @@
-﻿using System;
+﻿using System.Collections;
 using UnityEngine;
 
 public class CassetteGenerator : MonoBehaviour
 {
-    [SerializeField] GameObject _cassettePrefab;
-
+    [SerializeField] GameObject[] _cassettePrefab;
     private void Awake()
     {
-        GameObject cassette = Instantiate(_cassettePrefab, GetCassSpawnPos(), this.transform.rotation);
+        GameObject cassette = Instantiate(_cassettePrefab[Random.Range(0, _cassettePrefab.Length)], GetCassSpawnPos(), this.transform.rotation);
         cassette.transform.parent = this.transform;
     }
     private Vector3 GetCassSpawnPos()
     {
         string name = this.gameObject.name;
         float xPos = 0;
-        switch(name)
+        switch (name)
         {
             case "Group 011(Clone)":
                 xPos = -5;

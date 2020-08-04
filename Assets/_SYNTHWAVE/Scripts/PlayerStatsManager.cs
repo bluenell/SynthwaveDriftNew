@@ -6,5 +6,11 @@ public class PlayerStatsManager : MonoBehaviour
 {
 	public PlayerStats PlayerStats;
 
+	public void WriteToPlayerPrefs(string key, int value)
+	{
+		PlayerPrefs.SetInt(key, value);
+	}
+
+
 
 }

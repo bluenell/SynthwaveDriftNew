@@ -15,6 +15,7 @@ public class CarsDataContainer : MonoBehaviour
 		CleanUp();
 	}
 
+
 	private void CheckCarUnlockStatus()
 	{
 		foreach (Car car in AllCars)

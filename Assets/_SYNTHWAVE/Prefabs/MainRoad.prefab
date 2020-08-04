@@ -833,7 +833,7 @@ GameObject:
   m_Component:
   - component: {fileID: 763650900686898374}
   - component: {fileID: 7152453016809291689}
-  - component: {fileID: 634523257547323144}
+  - component: {fileID: -7465117801916225099}
   m_Layer: 0
   m_Name: MainRoad
   m_TagString: Untagged
@@ -872,7 +872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb87da7e24be6494a807c237995565fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &634523257547323144
+--- !u!114 &-7465117801916225099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -885,9 +885,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _obstacleGroups:
-  - {fileID: 2150141325306567638, guid: e9cc7f419ec414d48876d75188271df7, type: 3}
-  - {fileID: 778740659762422050, guid: 1ad4594619f60cf4088b856029a9d83e, type: 3}
   - {fileID: 6642976062109300809, guid: 8b9fcb8c02d541945a7b3cc8d43a89c1, type: 3}
+  - {fileID: 778740659762422050, guid: 1ad4594619f60cf4088b856029a9d83e, type: 3}
+  - {fileID: 2150141325306567638, guid: e9cc7f419ec414d48876d75188271df7, type: 3}
 --- !u!1 &5123345586951248236
 GameObject:
   m_ObjectHideFlags: 0

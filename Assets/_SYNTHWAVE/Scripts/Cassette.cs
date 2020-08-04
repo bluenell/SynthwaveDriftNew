@@ -1,34 +1,23 @@
 ﻿using System;
 using UnityEngine;
 
-public class Cassette : MonoBehaviour, ICollectable
+public class Cassette : Collectable, ICollectable
 {
-	[SerializeField] float _rotationAmount;
-	[SerializeField] float _movementSpeed;
-	[SerializeField] float _movementHeight;
 
-	public void OnCollection()
+	GameManager _gameManager;
+
+	void Awake()
 	{
-		Debug.Log("Collected Cassette");
+		_gameManager = FindObjectOfType<GameManager>();
 	}
 
-	public void OnCollisionEnter(Collision collision)
+	public void Collect()
 	{
-		if (collision.gameObject.tag=="Player")
-		{
-			OnCollection();
-		}
-		
+		_gameManager.CassettesPerRun++;
+		Destroy(this.gameObject);
 	}
 
-	private void FixedUpdate()
-	{
-		transform.Rotate(0, _rotationAmount * Time.deltaTime, 0);
-		Vector3 position = transform.position;
-		float newY = Mathf.Sin(Time.time * _movementSpeed);
-		transform.position = new Vector3(position.x, newY, position.z);
-
-	}
+	
 
 
 
